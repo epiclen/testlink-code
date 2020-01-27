@@ -24,6 +24,7 @@ ALTER TABLE /*prefix*/users MODIFY password VARCHAR(255) NOT NULL default '';
 ALTER TABLE /*prefix*/testplan_platforms ADD COLUMN active tinyint(1) NOT NULL default '1';
 ALTER TABLE /*prefix*/platforms ADD COLUMN  enable_on_design tinyint(1) NOT NULL default '0';
 ALTER TABLE /*prefix*/platforms ADD COLUMN  enable_on_execution tinyint(1) NOT NULL default '1';
+<<<<<<< HEAD
 
 --
 ALTER TABLE /*prefix*/nodes_hierarchy ADD INDEX /*prefix*/nodes_hierarchy_node_type_id (node_type_id);
@@ -46,6 +47,8 @@ CREATE TABLE /*prefix*/execution_tcsteps_wip (
   PRIMARY KEY  (id),
   UNIQUE KEY /*prefix*/execution_tcsteps_wip_idx1(`tcstep_id`,`testplan_id`,`platform_id`,`build_id`)
 ) DEFAULT CHARSET=utf8;
+=======
+>>>>>>> fac68e3aa... typo error
 
 
 CREATE TABLE /*prefix*/testcase_platforms (
